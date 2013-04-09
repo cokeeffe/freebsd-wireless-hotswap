@@ -11,14 +11,14 @@ if [ $IP == $IP3 ]
 then
   echo "Current $IP";
 	 `ifconfig wlan0 inet6 $IP delete`;
-	 `ifconfig wlan0 inet6 add $IP2/64 ssid D2037_1`;
+	 `ifconfig wlan0 inet6 add $IP2/64 ssid AP1`;
 	 `route delete -inet6 default`;
 	 `route add -inet6 default 2001:db8:0:32::1`;
 	echo "New IP $IP2";
 else
 	echo "Current $IP"
 	 `ifconfig wlan0 inet6 $IP2 delete`;
-	 `ifconfig wlan0 inet6 add $IP3/64 ssid D2037_2`;
+	 `ifconfig wlan0 inet6 add $IP3/64 ssid AP2`;
 	 `route delete -inet6 default`;
 	 `route add -inet6 default 2001:db8:0:68::1`;
 	echo "New IP $IP3";
